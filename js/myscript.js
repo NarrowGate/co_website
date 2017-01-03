@@ -13,19 +13,19 @@ $(function() {
   // add inbody class
   var hash = $(this).find('li.active a').attr('href');
   if(hash !== '#home') {
-    $('header nav').addClass('inbody');
+    $('header nav.radial').addClass('inbody');
   } else {
-    $('header nav').removeClass('inbody');
+    $('header nav.radial').removeClass('inbody');
   }
 
 
   // Add an inbody class to nav when scrollspy event fires
-  $('.navbar-fixed-top').on('activate.bs.scrollspy', function() {
+  $('.navbar-fixed-bottom').on('activate.bs.scrollspy', function() {
     var hash = $(this).find('li.active a').attr('href');
     if(hash !== '#home') {
-      $('header nav').addClass('inbody');
+      $('header nav.radial').addClass('inbody');
     } else {
-      $('header nav').removeClass('inbody');
+      $('header nav.radial').removeClass('inbody');
     }
   });
 
@@ -65,5 +65,4 @@ function smoothScroll() {
         })
     })
 };
-
-    smoothScroll();
+smoothScroll();

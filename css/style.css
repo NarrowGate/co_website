@@ -102,7 +102,7 @@ and (max-width: 768px) {
 /**  nav inbody **/
 
 header .inbody {
-  background: rgba(104,73,49,.9);
+  /*background: rgba(104,73,49,.9);*/
 }
 
 header .navbar.inbody {

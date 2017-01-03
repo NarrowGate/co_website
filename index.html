@@ -6,14 +6,28 @@
   <title>Kradle</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+
   <script src="js/prefixfree.min.js"></script>
+  <script src="js/polyfills.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/radial_menu.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
 <header>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><h1>Wisdom <span class="subhead">Pet Medicine</span></h1></a>
+       <nav class="pricing navbar-right">
+            <a href="#">Pricing / Free Trial</a>
+            <a href="#">Login</a>
+        </nav>
+    </div>
+    </nav>
+
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
@@ -22,17 +36,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#home"><h1>Wisdom <span class="subhead">Pet Medicine</span></h1></a>
       </div><!-- navbar-header -->
       <div class="collapse navbar-collapse" id="collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#feature">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>          
-        </ul>        
+          <nav class="radial">
+            <!-- Start Nav Structure -->
+            <button class="cn-button" id="cn-button"></button>
+            <div class="cn-wrapper" id="cn-wrapper">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about"><span>About</span></a></li>
+                    <li><a href="#feature"><span>Features</span></a></li>
+                    <li><a href="#pricing"><span>Pricing</span></a></li>
+                    <li><a href="#news"><span>News</span></a></li>
+                    <li><a href="#contact"><span>Contact</span></a></li> 
+                </ul>
+            </div>
+            <!-- End of Nav Structure -->
+          </nav> 
       </div><!-- collapse navbar-collapse -->
     </div><!-- container -->
   </nav>
@@ -40,6 +59,9 @@
   <div id="home" style="min-height:850px">
     <div class="item active"></div>    
   </div><!-- home -->
+
+
+
 </header>
 
 <div class="main">
@@ -133,7 +155,7 @@
     <div class="row">
       <div class="col-sm-6">
         <p>Call us toll-free at <span class="phone">888-555-1212</span></p>
-        <p>All contents &copy; 2014 <a href="#">Kradle.com</a>. All rights reserved.</p>    
+        <p>All contents &copy; 2016 <a href="#">Kradle.com</a>. All rights reserved.</p>    
       </div><!-- col-sm-6 -->
       <div class="col-sm-6">
         <nav class="navbar navbar-default" role="navigation">
@@ -156,5 +178,34 @@
   
   
 <script src="js/myscript.js"></script>
+
+    <script type="text/javascript">
+    (function(){
+
+    var button = document.getElementById('cn-button'),
+    wrapper = document.getElementById('cn-wrapper');
+
+    //open and close menu when the button is clicked
+    var open = false;
+    button.addEventListener('click', handler, false);
+
+    function handler(){
+      if(!open){
+        this.innerHTML = "Close";
+        classie.add(wrapper, 'opened-nav');
+      }
+      else{
+        this.innerHTML = "Menu";
+        classie.remove(wrapper, 'opened-nav');
+      }
+      open = !open;
+    }
+    function closeWrapper(){
+        classie.remove(wrapper, 'opened-nav');
+    }
+
+})();
+    </script>
+
 </body>
 </html>
