@@ -145,6 +145,7 @@ header .inbody .navbar-brand span.subhead {
 
 #home {
   background: url(../images/bg_hme.png);
+  background: #d5e4f7;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -317,4 +318,11 @@ footer .navbar-nav>li a {
   padding-bottom: 0;
   text-decoration: underline;
   color: #d9edf7 !important;
+}
+
+::selection {
+  background: #81e4ec; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #81e4ec; /* Gecko Browsers */
 }
