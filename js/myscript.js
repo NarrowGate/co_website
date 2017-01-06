@@ -65,4 +65,4 @@ function smoothScroll() {
         })
     })
 };
-smoothScroll();
+// smoothScroll();
