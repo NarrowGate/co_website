@@ -145,9 +145,16 @@ header .inbody .navbar-brand span.subhead {
 
 #home {
   background: url(../images/bg_hme.png);
-  background: #d5e4f7;
+  /*background: #d5e4f7;*/
   background-repeat: no-repeat;
   background-size: cover;
+
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
 }
 
 /**  Page -- About **/
@@ -279,6 +286,20 @@ and (max-width: 768px) {
   content: '';
 }
 */
+
+#feature {
+    background: url(../images/bg_hme.png);
+  /*background: #d5e4f7;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 /**  Footer **/
 
 footer {
