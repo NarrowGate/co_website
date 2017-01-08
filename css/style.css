@@ -144,8 +144,9 @@ header .inbody .navbar-brand span.subhead {
 /**  Page -- Home **/
 
 #home {
-  background: url(../images/bg_hme.png);
+  background: url(../images/bg_hme_les_op.png);
   /*background: #d5e4f7;*/
+  background-color: #d5e4f7;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -288,8 +289,9 @@ and (max-width: 768px) {
 */
 
 #feature {
-    background: url(../images/bg_hme.png);
+    background: url(../images/bg_hme_les_op.png);
   /*background: #d5e4f7;*/
+  background-color: #d5e4f7;
   background-repeat: no-repeat;
   background-size: cover;
 
