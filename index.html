@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/land_anim.css">
   <script src="js/prefixfree.min.js"></script>
+  <script src="js/modal/modernizr.custom.js"></script>  
   <script src="js/polyfills.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/radial_menu.css">
+    <link rel="stylesheet" href="css/modal/component.css">
+    <link rel="stylesheet" href="css/modal/default.css">    
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -22,7 +25,7 @@
       <a class="navbar-brand" href="#home"></a>
        <nav class="pricing navbar-right">
             <a href="#">Pricing / Free Trial</a>
-            <a href="#">Login</a>
+            <a href="#" class="md-trigger md-setperspective" data-modal="modal-17">Login</a>
         </nav>
     </div>
     </nav>
@@ -122,7 +125,23 @@
     </div>    
   </div><!-- home -->
 
+    <div class="md-modal md-effect-17" id="modal-17">
+      <div class="md-content">
+        <h3>Modal Dialog</h3>
+        <div>
+          <p>This is a modal window.</p>
+          <br><br><br><br><br>
+<!--           <ul>
+            <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+            <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+            <li><strong>Close:</strong> click on the button below to close the modal.</li>
+          </ul> -->
+          <a class="md-close">Close me!</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="md-overlay"></div><!-- the overlay element -->
 
 </header>
 
@@ -245,7 +264,17 @@
 
   <script src="js/gsap/plugins/ScrollToPlugin.min.js"></script>
   
-  
+    <script src="js/modal/classie.js"></script>
+    <script src="js/modal/modalEffects.js"></script>
+
+    <!-- for the blur effect -->
+    <!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+    <script>
+      // this is important for IEs
+      var polyfilter_scriptpath = '/js/modal/';
+    </script>
+    <script src="js/modal/cssParser.js"></script>
+    <script src="js/modal/css-filters-polyfill.js"></script>  
   
 <script src="js/myscript.js"></script>
 
