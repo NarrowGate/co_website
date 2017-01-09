@@ -144,10 +144,18 @@ header .inbody .navbar-brand span.subhead {
 /**  Page -- Home **/
 
 #home {
-  background: url(../images/bg_hme.png);
-  background: #d5e4f7;
+  background: url(../images/bg_hme_les_op.png);
+  /*background: #d5e4f7;*/
+  background-color: #d5e4f7;
   background-repeat: no-repeat;
   background-size: cover;
+
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
 }
 
 /**  Page -- About **/
@@ -280,9 +288,24 @@ and (max-width: 768px) {
 }
 */
 
+
 img.radImg {
   position: relative;
   bottom: -300px;
+}
+
+#feature {
+    background: url(../images/bg_hme_les_op.png);
+  /*background: #d5e4f7;*/
+  background-color: #d5e4f7;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /**  Footer **/
