@@ -27,7 +27,7 @@ $(window).load(function(){
 	{delay:1, scale:10, ease: Back.easeOut});*/
 
 var controller = new ScrollMagic.Controller();
-var attractionstween = new TimelineMax().from('.radImg', 1, {opacity: .2, scale:1, y: -500, ease:Bounce.easeOut});
+var attractionstween = new TimelineMax().from('.radialMenuContainer', 1, {opacity: .2, scale:1, y: -500, ease:Bounce.easeOut});
 		var introScene = new ScrollMagic.Scene({
 	        triggerElement: '#feature',
 	        repeat:1
@@ -36,6 +36,38 @@ var attractionstween = new TimelineMax().from('.radImg', 1, {opacity: .2, scale:
 	    .setTween(attractionstween)
 	    .addTo(controller);
 
+
+TweenLite.set(overlay, {y:0, yPercent:-100});
+
+document.getElementById("radialClick").addEventListener("click", animateBlde);
+document.getElementById("clse").addEventListener("click", closeBlade);
+
+function closeBlade(event) {
+	  event.preventDefault();
+	  
+	  TweenMax.to(overlay, .5, { css:{opacity:0}});
+};
+function animateBlde() {
+	  // TweenMax.to(overlay, 0.8, {
+   //    yPercent: 0
+   //  });
+
+// TweenMax.to(overlay, 1, { x:500 , opacity:1 , ease:Bounce.easeOut  });
+var firstBlade;
+	var tl = new TimelineMax();
+
+tl.from(overlay , 0.1, {  css:{opacity:0, display:'none'}, ease:Bounce.easeOut }) 
+.to(overlay , 0.7, {  css:{scaleX:2, scaleY:1.5, x:500, opacity:1,autoAlpha: 1, display:'block'},  ease:Bounce.easeOut })
+.to(radImg, 2, { rotation:180,  ease:Bounce.easeOut })
+.to(radialClick, 1, { css:{opacity:0, display:'none'},  ease:Bounce.easeOut })
+.to(radialClick, .5, { css:{opacity:.5, display:'block', x:230},  ease:Circ.easeOut });  
+firstBlade = false;
+
+
+
+
+
+}
 /*var scene = new ScrollScene({
 	triggerElement: "#feature"
 }).setTween(attractionstween).addTo(controller);*/
